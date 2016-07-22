@@ -1,0 +1,41 @@
+table
+{
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background: rgba(68, 68, 232, 0.06);
+}
+th {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+td {
+    border: 1px solid #ccc;
+    text-align: center;
+    height: 30px;
+
+}
+
+.layer1 {
+    width: 300px;
+    background: rgba(68, 68, 232, 0.06);
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.layer2
+{
+    width: 100px;
+    float: left;
+}
+.button
+{
+    width: 300px;
+    text-align: center;
+}
+.clear
+{
+ border: none;
+}
+.center
+{
+    text-align: center;
+}

@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Slava
-  Date: 20.07.2016
-  Time: 11:54
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
@@ -37,7 +31,7 @@
                 <td width="120">${user.name}</td>
                 <td width="120">${user.age}</td>
                 <td width="120">${user.admin}</td>
-                <td width="200">${user.createDate}</td>
+                <td width="200">${user.createdDate}</td>
                 <td width="120"><a href="<c:url value='/edit/${user.id}/'/>">Edit</a></td>
                 <td width="120"><a href="<c:url value='/remove/${user.id}'/>">Delete</a></td>
             </tr>

@@ -28,7 +28,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>net.crudapp.model.UserEntity</value>
+                <value>ru.crud.app.model.UserEntity</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -39,11 +39,11 @@
         </property>
     </bean>
 
-    <bean id="userDao" class="net.crudapp.dao.UserDaoImpl">
+    <bean id="userDao" class="ru.crud.app.dao.UserDaoImpl">
         <property name="sessionFactory" ref="hinernate4AnnotationsSessionFacrory"/>
     </bean>
 
-    <bean id="userService" class="net.crudapp.service.UserServiceImpl">
+    <bean id="userService" class="ru.crud.app.service.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
     </bean>
 

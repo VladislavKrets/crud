@@ -1,6 +1,6 @@
-package net.crudapp.dao;
+package ru.crud.app.dao;
 
-import net.crudapp.model.UserEntity;
+import ru.crud.app.model.UserEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
@@ -9,9 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * Created by Slava on 19.07.2016.
- */
 @Repository
 public class UserDaoImpl implements UserDao {
     private SessionFactory sessionFactory;

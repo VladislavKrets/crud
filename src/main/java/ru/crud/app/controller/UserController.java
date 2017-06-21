@@ -1,7 +1,7 @@
-package net.crudapp.controller;
+package ru.crud.app.controller;
 
-import net.crudapp.model.UserEntity;
-import net.crudapp.service.UserService;
+import ru.crud.app.model.UserEntity;
+import ru.crud.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

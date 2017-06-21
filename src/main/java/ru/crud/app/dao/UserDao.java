@@ -1,13 +1,11 @@
-package net.crudapp.service;
+package ru.crud.app.dao;
 
-import net.crudapp.model.UserEntity;
+import ru.crud.app.model.UserEntity;
 
 import java.util.List;
 
-/**
- * Created by Slava on 19.07.2016.
- */
-public interface UserService {
+
+public interface UserDao {
     public void addUser(UserEntity usersEntity);
     public void updateUser(UserEntity usersEntity);
     public void removeUser(int id);

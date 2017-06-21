@@ -1,17 +1,12 @@
-package net.crudapp.service;
+package ru.crud.app.service;
 
-import net.crudapp.dao.UserDao;
-import net.crudapp.model.UserEntity;
+import ru.crud.app.dao.UserDao;
+import ru.crud.app.model.UserEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-/**
- * Created by Slava on 19.07.2016.
- */
 @Service
 public class UserServiceImpl implements UserService {
     private UserDao userDao;

@@ -1,23 +1,27 @@
-package net.crudapp.model;
+package ru.crud.app.model;
+
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
-/**
- * Created by Slava on 19.07.2016.
- */
 @Entity
-@Table(name = "user", schema = "test")
+@Table(name = "users")
 public class UserEntity {
-    private Integer id;
-    private String name;
-    private Integer age;
-    private Boolean isAdmin;
-    private Timestamp createDate;
-
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    private Integer id;
+    @Column
+    private String name;
+    @Column
+    private Integer age;
+    @Column
+    private Boolean isAdmin;
+    @Column
+    @Type(type = "timestamp")
+    private Date createdDate;
+
     public Integer getId() {
         return id;
     }
@@ -26,8 +30,6 @@ public class UserEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -36,8 +38,6 @@ public class UserEntity {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "age")
     public Integer getAge() {
         return age;
     }
@@ -46,8 +46,6 @@ public class UserEntity {
         this.age = age;
     }
 
-    @Basic
-    @Column(name = "isAdmin")
     public Boolean getAdmin() {
         return isAdmin;
     }
@@ -56,14 +54,12 @@ public class UserEntity {
         isAdmin = admin;
     }
 
-    @Basic
-    @Column(name = "createDate")
-    public Timestamp getCreateDate() {
-        return createDate;
+    public Date getCreatedDate() {
+        return createdDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
-        this.createDate = createDate;
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
     }
 
     @Override
@@ -77,7 +73,7 @@ public class UserEntity {
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (age != null ? !age.equals(that.age) : that.age != null) return false;
         if (isAdmin != null ? !isAdmin.equals(that.isAdmin) : that.isAdmin != null) return false;
-        if (createDate != null ? !createDate.equals(that.createDate) : that.createDate != null) return false;
+        if (createdDate != null ? !createdDate.equals(that.createdDate) : that.createdDate != null) return false;
 
         return true;
     }
@@ -88,7 +84,7 @@ public class UserEntity {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (age != null ? age.hashCode() : 0);
         result = 31 * result + (isAdmin != null ? isAdmin.hashCode() : 0);
-        result = 31 * result + (createDate != null ? createDate.hashCode() : 0);
+        result = 31 * result + (createdDate != null ? createdDate.hashCode() : 0);
         return result;
     }
 
@@ -99,7 +95,7 @@ public class UserEntity {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", isAdmin=" + isAdmin +
-                ", createDate=" + createDate +
+                ", createDate=" + createdDate +
                 '}';
     }
 }
